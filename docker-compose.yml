@@ -1,0 +1,16 @@
+version: '2'
+services:
+ web:
+    # build image dari Dockerfile dalam directory yang sama
+    build: .
+    ports:
+      # {host}:{docker}
+      - 9090:8080
+    volumes:
+      # mount semua source code project ke directory /app pada docker container
+      # https://docs.docker.com/engine/tutorials/dockervolumes/#mount-a-host-directory-as-a-data-volume
+      - .:/app
+    environment:
+     - REDIS_HOST=redis
+ redis: 
+  image: redis:alpine

@@ -1,0 +1,13 @@
+{
+    "name"  : "Belajar Docker dengan PHP",
+    "authors": [
+        {
+            "name": "Rahmat",
+            "email": "rahmat@docotel.co.id"
+        }        
+    ],
+    "require": {
+        "slim/slim" : "^3.0",
+        "predis/predis": "^1.1"
+    }
+}
